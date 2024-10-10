@@ -42,19 +42,17 @@
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Collect data from the form
-    $firstname = htmlspecialchars($_POST['first_name']);
-    $lastName = htmlspecialchars($_POST['last_name']);
+    $fname = htmlspecialchars($_POST['first_name']);
+    $lname = htmlspecialchars($_POST['last_name']);
     $age = htmlspecialchars($_POST['age']);
     $contact = htmlspecialchars($_POST['contact']);
     $address = htmlspecialchars($_POST['address']);
 
-    // Output the form data
 
     echo '<div class="my-div">';
     echo "<h2>Submitted Data</h2>";
-    echo "<p><strong>First Name:</strong> " . $firstname . "</p>";
-    echo "<p><strong>Last Name:</strong> " . $lastName . "</p>";
+    echo "<p><strong>First Name:</strong> " . $fname . "</p>";
+    echo "<p><strong>Last Name:</strong> " . $lname . "</p>";
     echo "<p><strong>Age:</strong> " . $age . "</p>";
     echo "<p><strong>Contact:</strong> " . $contact . "</p>";
     echo "<p><strong>Address:</strong> " . $address . "</p>";
